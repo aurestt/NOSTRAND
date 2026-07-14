@@ -1,0 +1,180 @@
+:root {
+    --bg-color: #030303;
+    --text-primary: #e0e0e0;
+    --text-secondary: #808080;
+    --card-bg: rgba(15, 15, 15, 0.7);
+    --border-color: rgba(50, 50, 50, 0.4);
+    --accent-color: #222222;
+    --btn-hover: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+    /* Memberikan tekstur gelap yang halus */
+    background-image: radial-gradient(circle at center, #0a0a0a 0%, #000000 100%);
+}
+
+/* Efek glow cahaya halus di belakang logo */
+.glow-bg {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(50, 50, 50, 0.2) 0%, rgba(0,0,0,0) 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    animation: fadeInDown 1s ease-out;
+}
+
+.logo {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 12px;
+    color: #ffffff;
+    /* Sedikit text-shadow untuk mempertegas gaya neon tapi abu-abu/putih */
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    letter-spacing: 5px;
+    font-weight: 300;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero {
+    text-align: center;
+    max-width: 650px;
+    margin-bottom: 6rem;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #eeeeee;
+}
+
+.hero .description {
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    font-size: 1.15rem;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.btn-join {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.btn-join:hover {
+    background-color: var(--btn-hover);
+    border-color: #666666;
+    box-shadow: 0 0 20px rgba(255,255,255,0.08);
+    transform: translateY(-3px);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2.5rem;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #666666;
+    background: rgba(25, 25, 25, 0.8);
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.card p {
+    color: var(--text-secondary);
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 5rem;
+}
+
+/* Animasi sederhana */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}

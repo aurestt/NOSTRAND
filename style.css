@@ -15,11 +15,15 @@
     font-family: 'Outfit', sans-serif;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--text-primary);
     line-height: 1.6;
-    overflow-x: hidden;
     position: relative;
     /* Memberikan tekstur gelap yang halus */
     background-image: radial-gradient(circle at center, #0a0a0a 0%, #000000 100%);

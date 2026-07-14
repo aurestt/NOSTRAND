@@ -25,12 +25,22 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     position: relative;
-    /* Menggunakan background gambar */
+    /* Background gambar dipindahkan ke pseudo-element (::before) untuk mencegah bug iOS Safari */
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background-image: url('bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    z-index: -3;
+    pointer-events: none;
 }
 
 /* Efek glow cahaya halus di belakang logo */

@@ -25,8 +25,12 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     position: relative;
-    /* Memberikan tekstur gelap yang halus */
-    background-image: radial-gradient(circle at center, #0a0a0a 0%, #000000 100%);
+    /* Menggunakan background gambar */
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* Efek glow cahaya halus di belakang logo */

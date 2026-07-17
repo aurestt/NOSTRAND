@@ -123,6 +123,13 @@ main {
     line-height: 1.8;
 }
 
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
 .btn-join {
     position: relative;
     display: inline-block;
